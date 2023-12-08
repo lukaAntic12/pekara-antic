@@ -85,6 +85,9 @@ button:hover {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+  .flex{
+    margin-bottom: 0px !important;
+  }
 }
 /*--------------------------------------------------------------
 # Header
@@ -731,6 +734,7 @@ border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-bottom: 110px;
 }
 #contact .info {
@@ -779,6 +783,7 @@ border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin: 0px 6px;
 }
 #contact .social-links a i {
   line-height: 0;

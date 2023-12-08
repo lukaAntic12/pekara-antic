@@ -78,7 +78,6 @@ function menjaj() {
   document.getElementById("hero").classList.add("slide-in-left"); 
   currentImageIndex = (currentImageIndex + 1) % pocetnaCover.length;
 
-  // Ukloni klasu nakon završetka animacije
   setTimeout(function() {
     document.getElementById("hero").classList.remove("slide-in-left");
   }, 500);
@@ -115,7 +114,7 @@ if (backtotop) {
 
 $(document).ready(function () {
     $(".plugin").bxSlider({
-      mode: "horizontal", //horizontal vertical fade
+      mode: "horizontal",
       speed: 1000,
       auto: true,
       pause: 5000,
@@ -313,7 +312,6 @@ $(document).ready(function(){
 
 /*-----------------------FORMA ZA VALIDIRANJE-----------------------*/
 
-// Deklaracija niza za radio dugmad
 let nizRb = document.querySelectorAll('input[name="tipKontakt"]');
 
 function validateForm() {
@@ -372,9 +370,7 @@ function validateForm() {
     let slanjeNaKucnuAdresu = document.getElementById("kontaktMail");
   let adresaPolje = document.getElementById("adresaPolje");
 
-  // Ako je izabrano "Slanjem na kućnu adresu"
   if (slanjeNaKucnuAdresu.checked) {
-    // Ako je polje adrese vidljivo i nije popunjeno
     if (adresaPolje.style.display !== "none" && form['adresa'].value === '') {
       showError(adresaPolje.querySelector('input'), 'Morate uneti kućnu adresu!');
       passed = false;
@@ -393,7 +389,7 @@ if (!tipKontakt) {
 } else {
    
     tipKontakt.classList.add('validate');
-    showError(radioErrorElement, ''); // 
+    showError(radioErrorElement, '');
     document.getElementById('contactMethodError').innerText = '';
     document.getElementById('contactMethodError').style.display = 'none';
 }
@@ -439,7 +435,6 @@ if (numberMessage) {
 }
 
 if (selectedTipKontakt !== 'SMS') {
-  // Validate email only if the selected contact method is not "SMS"
   var emailMessage = '';
   if (form['email'].value === '') {
     emailMessage = "Morate popuniti ovo polje!";
@@ -458,7 +453,6 @@ if (selectedTipKontakt !== 'SMS') {
         form['email'].value = '';
         form['number'].value = '';
     
-        // Resetovanje radio dugmadi
         nizRb.forEach(rb => {
         rb.checked = false;
         });
@@ -471,22 +465,17 @@ if (selectedTipKontakt !== 'SMS') {
         document.getElementById("adresaPolje").style.display = "none";
       
         
-        // Dodajte ovaj deo da resetujete i sakrijete polje adrese
         form['adresa'].value = '';
         adresaPolje.style.display = "none";
   
     
-        // Resetovanje checkboxova
         checkboxes.forEach(checkbox => checkbox.checked = false);
     
-        // Resetovanje brojača slova
         document.querySelector("#komentar").value = '';
         document.querySelector("#brojSlova").textContent = '0/150';
     
-        // Resetovanje select elementa ddlUsluga
         form.querySelector("#ddlUsluga").value = '0';
     
-        // Resetovanje prikaza checkboxova
         prikazCheckBoxova(0);
       }
 
@@ -579,14 +568,12 @@ function prikazCheckBoxova(pom) {
     }
 }
 document.addEventListener("DOMContentLoaded", function () {
-  // Pratimo promene na radio dugmetu
   nizRb.forEach(function (rb) {
     rb.addEventListener("change", function () {
       handleRadioChange();
     });
   });
 
-  // Inicijalno postavljamo vidljivost polja adrese prema trenutnom stanju radio dugmeta
   handleRadioChange();
 });
 
@@ -595,17 +582,13 @@ function handleRadioChange() {
   let adresaPolje = document.getElementById("adresaPolje");
   
 
-  // Ako je izabrano "Slanjem na kućnu adresu", prikazujemo polje adrese
   if (slanjeNaKucnuAdresu.checked) {
     adresaPolje.style.display = "block";
     email.removeAttribute('disabled');
   } else {
-    // Inače, skrivamo polje adrese
     adresaPolje.style.display = "none";
     email.setAttribute('disabled', 'true');
     email.value = '';
 
   }
 }
-
-
