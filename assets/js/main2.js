@@ -323,7 +323,7 @@ function validateForm() {
     let emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
     let nameRegex = new RegExp(/^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,14}(\s[A-ZČĆŽŠĐ][a-zčćžšđ]{2,19})+$/);
     let numberRegex = new RegExp(/^(06[^7]\/[0-9]{7})|(067\/7[0-9]{6})$/);
-    let adresaRegex = new RegExp(/^[A-ZČĆŽŠĐ][a-zčćžšđ\s?0-9]*(?:\s?[A-ZČĆŽŠĐa-zčćžšđ]+[a-zčćžšđ0-9]*)*$/);
+    let adresaRegex = new RegExp(/^[A-ZČĆŽŠĐ][A-ZČĆŽŠĐa-zčćžšđ\s?0-9]*(?:\s?[A-ZČĆŽŠĐa-zčćžšđ]+[a-zčćžšđ0-9]*)*$/);
 
 
     let selectedTipKontakt = form['tipKontakt'].value;
