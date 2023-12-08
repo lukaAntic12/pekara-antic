@@ -320,73 +320,41 @@ function validateForm() {
   let form = document.forms['contactForm'];
   let passed = true;
 
-    let emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
-    let nameRegex = new RegExp(/^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,14}(\s[A-ZČĆŽŠĐ][a-zčćžšđ]{2,19})+$/);
-    let numberRegex = new RegExp(/^(06[^7]\/[0-9]{7})|(067\/7[0-9]{6})$/);
-    let adresaRegex = new RegExp(/^[A-ZČĆŽŠĐ][A-ZČĆŽŠĐa-zčćžšđ\s?0-9]*(?:\s?[A-ZČĆŽŠĐa-zčćžšđ]+[a-zčćžšđ0-9]*)*$/);
+  let emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+  let nameRegex = new RegExp(/^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,14}(\s[A-ZČĆŽŠĐ][a-zčćžšđ]{2,19})+$/);
+  let numberRegex = new RegExp(/^\+381\d{9}$/);
+  let adresaRegex = new RegExp(/^[A-ZČĆŽŠĐ][A-ZČĆŽŠĐa-zčćžšđ\s?0-9]*(?:\s?[A-ZČĆŽŠĐa-zčćžšđ]+[a-zčćžšđ0-9]*)*$/);
+
+  let selectedTipKontakt = form['tipKontakt'].value;
+
+  function showError(elem, message) {
+    elem.classList.add('error');
+    if (elem.nextElementSibling) {
+      elem.nextElementSibling.innerText = message;
+      elem.nextElementSibling.style.display = 'block';
+    }
+  }
+
+  form.querySelectorAll("input").forEach(function (el) {
+    el.classList.remove("error");
+  });
+  form.querySelector('textarea').classList.remove("error");
+  form.querySelectorAll('.validation').forEach(function (el) {
+    el.innerText = '';
+    el.style.display = "none";
+  });
 
 
-    let selectedTipKontakt = form['tipKontakt'].value;
-
-    function showError(elem, message) {
-        elem.classList.add('error');
-        if (elem.nextElementSibling) {
-            elem.nextElementSibling.innerText = message;
-            elem.nextElementSibling.style.display = 'block';
-        }
-    }
-
-    form.querySelectorAll("input").forEach(function (el) {
-        el.classList.remove("error");
-    });
-    form.querySelector('textarea').classList.remove("error");
-    form.querySelectorAll('.validation').forEach(function (el) {
-        el.innerText = '';
-        el.style.display = "none";
-    });
-
-    var nameMessage = '';
-    if (form['name'].value === '') {
-        nameMessage = "Morate popuniti ovo polje!";
-    } else if (!nameRegex.test(form['name'].value)) {
-        nameMessage = "Niste dobro uneli Ime i Prezime > (Luka Antić)";
-    }
-    if (nameMessage) {
-        showError(form['name'], nameMessage);
-        passed = false;
-    }
-
-    var numberMessage = '';
-    if (form['number'].value === '') {
-        numberMessage = "Morate popuniti ovo polje!";
-    } else if (!numberRegex.test(form['number'].value)) {
-        numberMessage = "Niste dobro uneli broj telefona > (069/6556594)";
-    }
-    if (numberMessage) {
-        showError(form['number'], numberMessage);
-        passed = false;
-    }
-
-    var emailMessage = '';
-    if (form['email'].value === '') {
-        emailMessage = "Morate popuniti ovo polje!";
-    } else if (!emailRegex.test(form['email'].value)) {
-        emailMessage = "Email mora biti u pravilnom formatu: primer@nesto.com";
-    }
-    if (emailMessage) {
-        showError(form['email'], emailMessage);
-        passed = false;
-    }
-    var adresaMessage = '';
-    if (form['adresa'].value === '') {
-        adresaMessage = "Morate popuniti ovo polje!";
-    } else if (!adresaRegex.test(form['adresa'].value)) {
-        adresaMessage = "Adresa mora biti u pravilnom formatu: Višnjička 61a";
-    }
-    if (adresaMessage) {
-        showError(form['adresa'], adresaMessage);
-        passed = false;
-    }
+  var adresaMessage = '';
+  if (form['adresa'].value === '') {
+    adresaMessage = "Morate popuniti ovo polje!";
+  } else if (!adresaRegex.test(form['adresa'].value)) {
+    adresaMessage = "Adresa mora biti u pravilnom formatu: Višnjička 61a";
+  }
+  if (adresaMessage) {
+    showError(form['adresa'], adresaMessage);
+    passed = false;
+  }
 
     let ddlUsluga = form.querySelector('#ddlUsluga');
     if (ddlUsluga.value === '0') {
@@ -448,6 +416,42 @@ if (!checked) {
     errorElement.innerText = '';
     errorElement.style.display = 'none';
 }
+var nameMessage = '';
+if (form['name'].value === '') {
+  nameMessage = "Morate popuniti ovo polje!";
+} else if (!nameRegex.test(form['name'].value)) {
+  nameMessage = "Niste dobro uneli ime i prezime : (Luka Antić)";
+}
+if (nameMessage) {
+  showError(form['name'], nameMessage);
+  passed = false;
+}
+
+var numberMessage = '';
+if (form['number'].value === '') {
+  numberMessage = "Morate popuniti ovo polje!";
+} else if (!numberRegex.test(form['number'].value)) {
+  numberMessage = "Niste dobro uneli broj telefona : (+381696556594)";
+}
+if (numberMessage) {
+  showError(form['number'], numberMessage);
+  passed = false;
+}
+
+if (selectedTipKontakt !== 'SMS') {
+  // Validate email only if the selected contact method is not "SMS"
+  var emailMessage = '';
+  if (form['email'].value === '') {
+    emailMessage = "Morate popuniti ovo polje!";
+  } else if (!emailRegex.test(form['email'].value)) {
+    emailMessage = "Niste dobro uneli email : primer@nesto.com";
+  }
+  if (emailMessage) {
+    showError(form['email'], emailMessage);
+    passed = false;
+  }
+}
+
     if (passed) {
         document.querySelector("#sendmessage").style.display = 'block';
         form['name'].value = '';
@@ -467,9 +471,9 @@ if (!checked) {
         document.getElementById("adresaPolje").style.display = "none";
       
         
-    // Dodajte ovaj deo da resetujete i sakrijete polje adrese
-    form['adresa'].value = '';
-    adresaPolje.style.display = "none";
+        // Dodajte ovaj deo da resetujete i sakrijete polje adrese
+        form['adresa'].value = '';
+        adresaPolje.style.display = "none";
   
     
         // Resetovanje checkboxova
@@ -484,12 +488,12 @@ if (!checked) {
     
         // Resetovanje prikaza checkboxova
         prikazCheckBoxova(0);
+      }
+
+      form['tipKontakt'].value = selectedTipKontakt;
+    
+      return false;
     }
-
-    form['tipKontakt'].value = selectedTipKontakt;
-
-    return false;
-}
 
 document.querySelector("#komentar").addEventListener("keyup", function () {
     document.querySelector("#brojSlova").textContent = `${document.querySelector("#komentar").value.length}/150`;
@@ -589,13 +593,18 @@ document.addEventListener("DOMContentLoaded", function () {
 function handleRadioChange() {
   let slanjeNaKucnuAdresu = document.getElementById("kontaktMail");
   let adresaPolje = document.getElementById("adresaPolje");
+  
 
   // Ako je izabrano "Slanjem na kućnu adresu", prikazujemo polje adrese
   if (slanjeNaKucnuAdresu.checked) {
     adresaPolje.style.display = "block";
+    email.removeAttribute('disabled');
   } else {
     // Inače, skrivamo polje adrese
     adresaPolje.style.display = "none";
+    email.setAttribute('disabled', 'true');
+    email.value = '';
+
   }
 }
 
