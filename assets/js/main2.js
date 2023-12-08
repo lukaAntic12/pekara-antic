@@ -524,7 +524,7 @@ function prikazCheckBoxova(pom) {
     switch (pom) {
         case 1: // PEKARSKI PROIZVODI
             brElem = 5;
-            prikaziCheckboxOpcije(["Djevrek", "Kiflice", "Pužići", "Pogačice", "Štapići"]);
+            prikaziCheckboxOpcije(["Đevrek", "Kiflice", "Pužići", "Pogačice", "Štapići"]);
             break;
         case 2: // PICE
             brElem = 5;
