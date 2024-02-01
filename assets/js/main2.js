@@ -280,36 +280,6 @@ galerija.innerHTML+=`
 
 /*-----------------------GALERIJA SLIKA-----------------------*/
 
-/*-----------------------KOMENTARI POSETIOCA-----------------------*/
-
-let nizKomentara = document.querySelectorAll("#Komentari .row.g-0");
-let komentariObj = [];
-komentariObj.push({ime:"Vladan Stanković",posao:"Programer",datum:'4.12.2023.',opis:'Često boravim u Beogradu i redovno kupujem vaše proizvode jer su stvarno najbolji u gradu!!!',link:"assets/img/vladan.jpg",alt:"vladan"});
-komentariObj.push({ime:"Tamara Nedeljković",posao:"Arhitekta",datum:'6.12.2023.',opis:'Izuzetno veliki izbor ukusnog i svežeg peciva i kolača čine ovu pekaru prepoznatljivom.',link:"assets/img/tamara.jpg",alt:"tamara"});
-komentariObj.push({ime:"Dragan Petrović",posao:"Advokat",datum:'7.12.2023.',opis:'Fantastični ste, izbor, ukus, o osoblju da ne govorim, kakva profesionalnost...svaka čast!!!',link:"assets/img/dragan.jpg",alt:"dragan"});
-
-function ispisKomentara(objects,objDiv){
-objDiv.forEach((element,indeks) =>{
-var cuvarTeksta=``;
-cuvarTeksta+=`<div class="col-md-3">
-<img src="${objects[indeks].link}" class="img-fluid" alt="${objects[indeks].alt}"/></div>`;
-cuvarTeksta+=`<div class="col-md-9 d-flex align-items-center">
-<div class="card-body">
-<h5 class="card-title">${objects[indeks].ime}</h5>
-<h6>${objects[indeks].posao}</h6>`;
-cuvarTeksta+=`<p class="card-text py-3">${objects[indeks].opis}</p>
-<p class="card-text"><small class="text-muted">Poslato:
-${objects[indeks].datum}</small></p></div></div>`;
-element.innerHTML = cuvarTeksta;
-});
-}
-ispisKomentara(komentariObj, nizKomentara);
-$(document).ready(function(){
-    $('#carouselCommentControls').carousel();
-});
-
-/*-----------------------KOMENTARI POSETIOCA-----------------------*/
-
 /*-----------------------FORMA ZA VALIDIRANJE-----------------------*/
 
 let nizRb = document.querySelectorAll('input[name="tipKontakt"]');
