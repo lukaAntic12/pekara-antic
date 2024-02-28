@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sr">
 
 <head>
@@ -19,6 +19,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.ico" rel="icon"/>
+  <link href="assets/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/704ff06fc0.js" crossorigin="anonymous"></script>
 
   <!-- Google Fonts -->
@@ -27,11 +28,12 @@
   <!-- Bootstrap CSS Files -->
   <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="assets/boxicons/css/boxicons.min.css" rel="stylesheet"/>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  
+
 </head>
 
 <body>
@@ -44,20 +46,27 @@
       </div>
 
       <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Početna</a></li>
+          <li><a class="nav-link scrollto" href="#about">O nama</a></li>
+          <li><a class="nav-link scrollto" href="#services">Usluge</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Galerija</a></li>
+          <li><a class="nav-link scrollto" href="#team">Autor</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Kontakt</a></li>
+        </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
     </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero">
+  <div id="hero">
     <div class="hero-container animate__animated animate__fadeInUp">
       <h1>Dobro došli u pekaru Antić</h1>
       <h2>Upoznajte naš asortiman</h2>
       <a href="#about" class="btn-get-started">Više o nama</a>
     </div>
   </div><!-- End Hero Section -->
-  
 
   <main id="main">
 
@@ -74,17 +83,11 @@
             <div id="text-1" class="animate__animated animate__bounce animate__delay-2s">
             </div>
           </div>
-          <div class="col-lg-6 order-lg-2 order-1" id="customSlider">
-            <div class="plugin">
-              
-                <img src="assets/img/bread.jpg" alt="bread"/>             
-                <img src="assets/img/sourdough.jpg" alt="sourdough"/>
-                <img src="assets/img/rye-bread.jpg" alt="rye-bread"/>
-            </div>
+          <div class="col-lg-6 order-lg-2 order-1 animate__animated animate__fadeInRight" id="customSlider">
+            <div class="background animate__animated animate__fadeInRight"></div>
+            <div class="background2 animate__animated animate__fadeInRight"></div>
+            <div class="background3 animate__animated animate__fadeInRight"></div>
           </div>
-          
-          
-          
         </div>
       </div>
     </section><!-- End About Section -->
@@ -93,7 +96,7 @@
     <section id="facts"> 
       <div class="container wow fadeIn"> 
         <div class="section-header"> 
-          <h3 class="section-title">STATISTIKA PEKARE ANTIĆ</h3> 
+          <h3 class="section-title"><button>STATISTIKA PEKARE ANTIĆ</button></h3> 
           <p class="section-description">Rad Pekare Antić na mesečnom nivou i beleške posetioca</p> 
         </div> 
         <div class="row counters"> 
@@ -131,313 +134,55 @@
           <h3 class="section-title">Oblasti delovanja</h3>
           <p class="section-description">Gde smo sve umešali prste</p>
         </div>
-        <div id="boxes-container" class="row"></div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="fas fa-bread-slice"></i></div>
+              <h4 class="title">Pekarski proizvodi</h4>
+              <p class="description">U ponudi imamo različite vrste hlebova, pita po kojima smo poznati, mrežica kao i drugih pekarskih proizvoda i peciva.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="fas fa-pizza-slice"></i></div>
+              <h4 class="title">Pice</h4>
+              <p class="description">U ponudi su kaprićoza, gurmanska i njeguška za one najzahtevnije ljubitelje ovog italijanskog specijaliteta.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="fas fa-glass-cheers"></i></div>
+              <h4 class="title">Sveži sokovi</h4>
+              <p class="description">Izaberite neki od različitih vrsta sokova i pića koja smo pripremili za vas, limunada ili ceđena pomorandža.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="fas fa-utensils"></i></div>
+              <h4 class="title">Kuvana jela</h4>
+              <p class="description">Svakog dana u određenim objektima imate veliki izbor kuvanih jela, roštilja kao i drugih gotovih jela.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="fas fa-mitten"></i></div>
+              <h4 class="title">Smrznuti proizvodi</h4>
+              <p class="description">Neki to vole kod kuće, slogan je za naše popularne proizvode koje od sada možete spremati sami kod kuće.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><i class="fas fa-birthday-cake"></i></div>
+              <h4 class="title">Torte i kolači</h4>
+              <p class="description">Pored klasičnih torti i poslastica za najveće sladokusce u ponudi su i druga slatka rešenja kojima nećete odoleti.</p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section><!-- End Services Section -->
     
-    <!-- MENI SECTION -->
-    <section id="menu">
-      
-      <div class="container-fluid py-5">
-        <div class="container py-5">
-          <div class="section-header">
-            <h3 class="section-title">Proizvodi</h3>
-            <p class="section-description">Neki od naših proizvoda koje vam preporučujemo
-            </p>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-12">
-              <div class="row border-bottom border-orange mt-lg-0 mt-5">
-                <div class="col-12 ps-0">
-                  <h3 class="orange text-center">PEKARSKI PROIZVODI</h3>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Đevrek</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">160</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Kiflice</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p> <span class="fw-bold">120</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Pužići</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p> <span class="fw-bold">180</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Pogačice</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">120</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Štapići</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p> <span class="fw-bold">80</span> din</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-12">
-              <div class="row border-bottom border-orange mt-lg-0 mt-5">
-                <div class="col-12 ps-0">
-                  <h3 class="orange text-center">PICE</h3>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Peperoni</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">240</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Margarita</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p> <span class="fw-bold">220</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Domaća pica</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p> <span class="fw-bold">260</span>din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Italijanska pica</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p> <span class="fw-bold">220</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Kaprićoza</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p> <span class="fw-bold">240</span> din</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-12">
-              <div class="row border-bottom border-orange mt-lg-0 mt-5">
-                <div class="col-12 ps-0">
-                  <h3 class="orange text-center">TORTE I KOLAČI</h3>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Kolač sa lešnicima</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p> <span class="fw-bold">240</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Čokoladni kolač</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">220</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Mafin</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">180</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Čiz kejk</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">200</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Kolač sa jagodama</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">160</span> din</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-5 az-invisible">
-            <div class="col-lg-4 col-12">
-              <div class="row border-bottom border-orange mt-lg-0 mt-5">
-                <div class="col-12 ps-0">
-                  <h3 class="orange text-center">KUVANA JELA</h3>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Rižoto sa šargarepom</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">160</span> din <span class="fw-bold">200</span> g</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Karađorđeva</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">400</span> din <span class="fw-bold">200</span> g</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Punjene tikvice</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">220</span> din <span class="fw-bold">200</span> g</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Paelja sa plodovima mora</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">280</span> din <span class="fw-bold">200</span> g</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Spanać</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">180</span> din <span class="fw-bold">200</span> g</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-12">
-              <div class="row border-bottom border-orange mt-lg-0 mt-5">
-                <div class="col-12 ps-0">
-                  <h3 class="orange text-center">SMRZNUTI PROIZVODI</h3>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Mrežica pečenica</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">400</span> din <span class="fw-bold">600</span> g</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Pita sa mesom</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">400</span> din <span class="fw-bold">600</span> g</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Pita sa sirom</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">400</span> din <span class="fw-bold">600</span> g</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Pita sa bundevom</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">600</span> din <span class="fw-bold">900</span> g</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Pita sa jabukom i vanilom</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">600</span> din <span class="fw-bold">900</span> g</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-12">
-              <div class="row border-bottom border-orange mt-lg-0 mt-5">
-                <div class="col-12 ps-0">
-                  <h3 class="orange text-center">SVEŽI SOKOVI</h3>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Limunada</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">120</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Sok od jabuke</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">120</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Sok od pomorandže</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">120</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Sok od borovnice</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">140</span> din</p>
-                </div>
-              </div>
-              <div class="row mt-4 border-bottom">
-                <div class="col-7 text-start">
-                  <p><span class="fw-bold">Sok od jagode</span></p>
-                </div>
-                <div class="col-5 text-end">
-                  <p><span class="fw-bold">140</span> din</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-5 text-center">
-            <button class="az-bg-orange dugme" >Vidi više</button>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
@@ -447,176 +192,129 @@
         </div>
       <div class="row" id="portfolio-wrapper"></div>
       </div>
-    </section>
-    <!-- End Portfolio Section -->
-    
-        <!-- ======= Team Section ======= -->
-    
-        <section id="team">
-          <div class="container wow fadeInUp">
-            <div class="section-header">
-              <h3 class="section-title">Autor</h3>
-            </div>
-            <div class="row">
-              <div class="col-lg-3 col-md-6">
-                <div class="member">
-                  <div class="pic">
-                    <img src="assets/img/autor.jpg" alt="Luka Antić"/>
-                  </div>
-                  <h4>Luka Antić</h4>
-                  <span>Student ICT-a 38/20</span>
-                  <div class="social">
-                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div id="autor" class="col-5">
-                <p class="section-description">Ja sam Luka Antić. Trenutno studiram Internet tehnologije na ICT univerzitetu u Beogradu. 
-                  Opisao bih sebe kao nekoga ko je uporan i brzo uči. U budućnosti planiram da usavršim svoje znanje i nastavim da radim ovaj posao. </p>
-              </div>
-            </div>
-          </div>
-        </section>
-    
-    
-    
-        <!-- End Team Section -->
-    
-        <!-- ======= Contact Section ======= -->
-        <section id="contact">
-          <div class="container">
-            <div class="section-header">
-              <h3 class="section-title">Mapa i kontakt forma</h3>
-              <p class="section-description">Ako želite da saznate više o nama, da nas pohvalite a i uputite kritiku, javite se što pre. Mi smo skroz dobri zbog vas i želimo da budemo još bolji!</p>
-            </div>
-          </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.358486992937!2d20.48222611537871!3d44.81426094829133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9609031735%3A0xc17ed71f59ac4725!2z0JLQuNGB0L7QutCwINCY0KbQoiDRiNC60L7Qu9Cw!5e0!3m2!1ssr!2srs!4v1639063780924!5m2!1ssr!2srs" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          <div class="container mt-5">
-            <div class="row justify-content-center">
-    
-              <div class="col-lg-3 col-md-4 flex">
-    
-                <div class="info">
-                  <div>
-                    <i class="bi bi-geo-alt"></i>
-                    <p>Višnjička 61a<br/>Beograd</p>
-                  </div>
-    
-                  <div>
-                    <i class="bi bi-envelope"></i>
-                    <p>info@pekaraantic.com</p>
-                  </div>
-    
-                  <div>
-                    <i class="bi bi-phone"></i>
-                    <p>+381 11 6556 594</p>
-                  </div>
-                  <div>
-                    <i class="bi bi-clock"></i>
-                    <p>Radno vreme: <br/>Pon - Ned : 08.00 - 22.00</p>
-                  </div>
+    </section><!-- End Portfolio Section -->
 
-                </div>
+    <!-- ======= Team Section ======= -->
 
-                <div class="social-links">
-                  <a class="twitter" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                  <a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                  <a class="instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                  <a class="linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
-    
-              </div>
-    
-              <div class="col-lg-5 col-md-8">
-                <div class="form">
-                    <div id="sendmessage">Podaci su prosleđeni. Hvala Vam!</div>
-                    <div id="errormessage"></div>
-                    <form name="contactForm" action="#" method="post" role="form" class="contactForm" onsubmit="return validateForm()" novalidate>
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Ime i prezime" />
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="number" class="form-control" id="number" placeholder="Broj telefona" value="+381"/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email"placeholder="Email" disabled/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group">
-                          <select id="ddlUsluga" class="form-select mb-3" aria-label=".form-select-lg example">
-                            <option class="d-flex align-bottom" selected="selected" value="0">Vrste naših proizvoda</option>
-                            <option class="d-flex align-bottom" value="1">Pekarski proizvodi</option>
-                            <option value="2">Pice</option>
-                            <option value="3">Torte i kolači</option>
-                            <option value="4">Kuvana jela</option>
-                            <option value="5">Smrznuti proizvodi</option>
-                            <option value="6">Sveži sokovi</option>
-                          </select>
-                        </div>
-                        <div id="productError" class="validation"></div>
-                        <div class="form-group">
-                          <p class="mb-2 ms-2 az-invisible fw-bold">Kategorije proizvoda</p>
-                          <div class="row" id="cuvaj"></div>
-                          <div class="row mt-2"></div>
-                          <p class="az-red mt-2 mb-0 ms-1 az-invisible fw-bold">Niste izabrali nijednu kategoriju </p>
-                        </div>
-                        <div class="col-md-12 mt-4 mb-3">
-                            <p class="mb-2 ms-2 fw-bold text-center">Kako želite da preuzmete porudžbinu?</p>
-                            <div class="row ">
-                                <div class="col-6 text-center">
-                                    <input class="form-check-input" checked="checked"type="radio" name="tipKontakt" id="kontaktSMS" value="SMS" />
-                                    <label class="form-check-label" for="kontaktSMS"> Dolaskom u pekaru
-                                    </label>
-                                </div>
-                                <div class="col-6 text-center">
-                                    <input class="form-check-input" type="radio" name="tipKontakt" id="kontaktMail" value="Email" />
-                                    <label class="form-check-label" for="kontaktMail"> Slanjem na kućnu adresu
-                                    </label>
-                                </div>
-                                <div id="contactMethodError" class="validation mt-3"></div>
-                            </div>
-                            <div class="form-group" id="adresaPolje">
-                              <input type="text" name="adresa" class="form-control" id="adresa" placeholder="Unesite kućnu adresu" />
-                              <div class="validation"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Unesi komentar" id="komentar" maxlength="150"></textarea>
-                            <div class="validation"></div>
-                            <div id="brojSlova">0/150</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Pošalji</button></div>
-                    </form>
-                </div>
-            </div>
-            
-    
-            </div>
-    
-          </div>
-        </section><!-- End Contact Section -->
-    
-      </main><!-- End #main -->
-      <!-- ======= Footer ======= -->
-      <footer id="footer">
-        <div class="container">
-          <div class="copyright">
-            Copyright &copy; 2024 Luka Antić 38/20. All Rights Reserved
-          </div>
-          <div class="credits">
-            <a href="sitemap.xml" title="Sitemap" target="_blank"><i class="fa fa-sitemap"></i></a><span>Sitemap</span>
-            <a href="rss.xml" title="Rss" target="_blank"><i class="fa fa-rss"></i></a><span>Rss</span>
-            <a href="dokumentacija.pdf" title="Dokumentacija" target="_blank"><i class="fa fa-file"></i></a><span>Dokumentacija</span>
-            </div>
+    <section id="team">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Autor</h3>
         </div>
-      </footer><!-- End Footer -->
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic">
+                <img src="assets/img/autor.jpg" alt="Luka Antić"/>
+              </div>
+              <h4>Luka Antić</h4>
+              <span>Student ICT-a 38/20</span>
+              <div class="social">
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div id="autor" class="col-5">
+            <p class="section-description">Ja sam Luka Antić. Trenutno studiram Internet tehnologije na ICT univerzitetu u Beogradu. 
+              Opisao bih sebe kao nekoga ko je uporan i brzo uči. U budućnosti planiram da usavršim svoje znanje i nastavim da radim ovaj posao. </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+
+
+    <!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-title">Mapa i kontakt forma</h3>
+          <p class="section-description">Ako želite da saznate više o nama, da nas pohvalite a i uputite kritiku, javite se što pre. Mi smo skroz dobri zbog vas i želimo da budemo još bolji!</p>
+        </div>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.358486992937!2d20.48222611537871!3d44.81426094829133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9609031735%3A0xc17ed71f59ac4725!2z0JLQuNGB0L7QutCwINCY0KbQoiDRiNC60L7Qu9Cw!5e0!3m2!1ssr!2srs!4v1639063780924!5m2!1ssr!2srs" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="bi bi-geo-alt"></i>
+                <p>Višnjička 61a<br/>Beograd</p>
+              </div>
+
+              <div>
+                <i class="bi bi-envelope"></i>
+                <p>info@pekaraantic.com</p>
+              </div>
+
+              <div>
+                <i class="bi bi-phone"></i>
+                <p>+381 11 6556 594</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a class="twitter" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a class="instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a class="google-plus" href="https://google-plus.com" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+              <a class="linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Podaci su prosleđeni. Hvala Vam!</div>
+              <div id="errormessage"></div>
+              <form name="contactForm" action="#" method="post" role="form" class="contactForm" onsubmit="return validateForm()" novalidate>
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Ime i prezime"/>
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="number" class="form-control" id="number" placeholder="Broj telefona"/>
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Unesi komentar" id="komentar" maxlength="150"></textarea>
+                  <div class="validation"></div>
+                  <div id="brojSlova">0/150</div>
+                </div>
+                <div class="text-center"><button type="submit" >Pošalji</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        Copyright &copy; 2023 Luka Antić 38/20. All Rights Reserved
+      </div>
+      <div class="credits">
+        <a href="sitemap.xml" title="Sitemap" target="_blank"><i class="fa fa-sitemap"></i></a><span>Sitemap</span>
+        <a href="dokumentacija.pdf" title="Dokumentacija" target="_blank"><i class="fa fa-file"></i></a><span>Dokumentacija</span>
+        </div>
+    </div>
+  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-angle-double-up"></i></a>
 
@@ -624,10 +322,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/main2.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
 
 </body>
 
-</html> -->
+</html>
